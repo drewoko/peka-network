@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.groovy.maven.feature:gmaven-feature-support:1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.maven.feature/gmaven-feature-support/1.0/dea129dda85a4dca4d7987841f08bf5503ac6bec/gmaven-feature-support-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.maven.feature/gmaven-feature-support/1.0/9d380ba9663e6f1480f12c3a791398daf0bad5bb/gmaven-feature-support-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

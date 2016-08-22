@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.groovy.maven.runtime:gmaven-runtime-api:1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.maven.runtime/gmaven-runtime-api/1.0/9121349c05148a27aa3c500c398eee6f07cc754/gmaven-runtime-api-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy.maven.runtime/gmaven-runtime-api/1.0/1e3fabb1465c541fee8c26c41ff32a322563320f/gmaven-runtime-api-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
