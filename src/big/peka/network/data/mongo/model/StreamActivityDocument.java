@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
-public class StreamActivityDocument {
+public class StreamActivityDocument extends DocumentEntity {
 
     private StreamDocument stream;
     private Date activityTime;

@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
-
+@Document
 public class DocumentEntity {
 
     @Id

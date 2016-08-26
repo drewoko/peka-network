@@ -5,9 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
-public class MessageDocument{
+public class MessageDocument extends DocumentEntity{
 
-    private String messageText;
+    private java.lang.String messageText;
 
     private UserDocument sender;
 
@@ -15,11 +15,11 @@ public class MessageDocument{
 
     private Date time;
 
-    public String getMessageText() {
+    public java.lang.String getMessageText() {
         return messageText;
     }
 
-    public void setMessageText(String messageText) {
+    public void setMessageText(java.lang.String messageText) {
         this.messageText = messageText;
     }
 

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 @Component
 public class ChatEventListener {
@@ -28,7 +29,7 @@ public class ChatEventListener {
         User user = new User(id, name);
         String messageText = messageProperties.optString("text");
         String channel = messageProperties.optString("channel");
-        Date time = new Date((Integer)messageProperties.opt("time"));
+        Date time = GregorianCalendar.getInstance().getTime();
 
         User channelOwner = FunstreamsApi.FunstreamsApiFactory.getInstance().
                 getChannel(new ChannelRequest(Lists.newArrayList(channel))).iterator().next().getUser();

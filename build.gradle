@@ -38,8 +38,7 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: springBootVersion
     compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '1.8.4.RELEASE'
 
-
-
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.12'
 
     compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
     compile group: 'com.google.guava', name: 'guava', version: '19.0'

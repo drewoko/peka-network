@@ -130,5 +130,7 @@
     <orderEntry type="library" exported="" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.mongodb:mongo-java-driver:2.13.3" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework.data:spring-data-mongodb:1.8.4.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.codehaus.jackson:jackson-mapper-asl:1.9.12" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.codehaus.jackson:jackson-core-asl:1.9.12" level="project" />
   </component>
 </module>

@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11d8ff9b-a105-4cf4-bd3e-70fd10d6d946" name="Default" comment="" />
+    <list default="true" id="11d8ff9b-a105-4cf4-bd3e-70fd10d6d946" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelEstimateDto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/common/DateRange.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/common/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_core_asl_1_9_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_jackson_jackson_mapper_asl_1_9_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamInfoIntervalDto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/UserDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ViewerInfoIntervalDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/funstream/client/ChatEventListener.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/funstream/client/ChatEventListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/DocumentEntity.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/DocumentEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/MessageDocument.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/MessageDocument.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/web/controllers/RecommendationsController.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/web/controllers/RecommendationsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService$AggregatedChannelEntries.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService$AggregatedChannelEntries.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService$ChannelEntry.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService$ChannelEntry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/services/statistic/StatisticService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/StreamActivityDocument.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/StreamActivityDocument.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/StreamDocument.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/StreamDocument.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/web/controllers/dto/StreamStatisticDto.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/web/controllers/dto/StreamStatisticDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/UserDocument.class" afterPath="$PROJECT_DIR$/build/classes/main/big/peka/network/data/mongo/model/UserDocument.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatEventListener.java" afterPath="$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatEventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.java" afterPath="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java" afterPath="$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java" afterPath="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java" afterPath="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/application.properties" afterPath="$PROJECT_DIR$/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peka-network.iml" afterPath="$PROJECT_DIR$/peka-network.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="peka-network.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -161,109 +205,138 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MongoDataPreprocessor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.java">
+      <file leaf-file-name="StatisticService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4348624">
-              <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="293" column="40" selection-start-line="293" selection-start-column="40" selection-end-line="293" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#18239#18240#0" expanded="true" />
+                <element signature="e#18286#18287#0" expanded="true" />
+                <element signature="e#18360#18361#0" expanded="true" />
+                <element signature="e#18424#18425#0" expanded="true" />
+                <element signature="e#19572#19573#0" expanded="true" />
+                <element signature="e#19625#19626#0" expanded="true" />
+                <element signature="e#19840#19841#0" expanded="true" />
+                <element signature="e#19878#19879#0" expanded="true" />
+                <element signature="e#19932#19933#0" expanded="true" />
+                <element signature="e#19978#19979#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FunstreamsClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/FunstreamsClient.java">
+      <file leaf-file-name="Number.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Number.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatResponseHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatResponseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/UserActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersistenceEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/PersistenceEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Channel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/Channel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
               <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#0#3692#0" expanded="false" />
+                <element signature="e#3045#3046#0" expanded="false" />
+                <element signature="e#3084#3085#0" expanded="false" />
+                <element signature="e#3507#3508#0" expanded="false" />
+                <element signature="e#3547#3548#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestDataConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/config/RestDataConfig.java">
+      <file leaf-file-name="Long.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Long.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/big/peka/network/spring/Application.java">
+      <file leaf-file-name="RecommendationsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityScan.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.3.3.RELEASE/5e9756091cc536ab48a7f98bdb551f4246c4ed0d/spring-boot-1.3.3.RELEASE-sources.jar!/org/springframework/boot/orm/jpa/EntityScan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.31716418">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
-                <element signature="e#0#3157#0" expanded="false" />
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1196#1197#0" expanded="true" />
+                <element signature="e#3547#3548#0" expanded="true" />
+                <element signature="e#3610#3611#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatEventListener.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/classes/main/big/peka/network/funstream/client/ChatEventListener.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#2407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChannelEstimateDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelEstimateDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
+              <folding>
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentActivitiesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/CurrentActivitiesController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="banner.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/banner.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StreamStatisticDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -278,6 +351,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -433,7 +509,7 @@
         <entry key="$USER_HOME$/IdeaProjects/arum-ihf-rest-api" value="20131838810707" />
         <entry key="D:/arum-ihf-rest-api" value="20341304901897" />
         <entry key="D:/arum-ihf-rest-api1" value="20341316285210" />
-        <entry key="$PROJECT_DIR$" value="2942079264106" />
+        <entry key="$PROJECT_DIR$" value="2942501841670" />
         <entry key="D:/smart_factory_scheduler" value="8699636925244" />
         <entry key="D:/strategic-service" value="2900694884905" />
       </map>
@@ -462,6 +538,8 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/1.3.3.RELEASE/b0a60f06e35a9df11d8fc34b5a1f31eee9dbdc6/spring-boot-starter-thymeleaf-1.3.3.RELEASE.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.8.4.RELEASE/21795681ae51522b8a54547ec9380742b54446ec/spring-data-mongodb-1.8.4.RELEASE-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.8.4.RELEASE/65853c0bfb352a79011cf301c6b52d6cf164db9/spring-data-mongodb-1.8.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.12/446f3d18401f02ac6741ff980d1a7566786936c/jackson-mapper-asl-1.9.12-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.12/8b290aae44213e2f6da00c07af59b0d442068f4d/jackson-mapper-asl-1.9.12.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/postgresql/postgresql/9.1-901-1.jdbc4/8e9d82a070f2b4d9e8561a567bf4daca36eed4e2/postgresql-9.1-901-1.jdbc4-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/postgresql/postgresql/9.1-901-1.jdbc4/9bfabe48876ec38f6cbaa6931bad05c64a9ea942/postgresql-9.1-901-1.jdbc4.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/91a4d115400e904f22b03a78deb355e9ea803cd4/guava-19.0-sources.jar" />
@@ -552,6 +630,8 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.5.RELEASE/a42bdfb833d0be6c18429aea3fb0fba81f85c6e8/spring-expression-4.2.5.RELEASE.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.13.3/72284343707580e77d93d9df02da83ea9f32018f/mongo-java-driver-2.13.3-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.13.3/e8835850d2866528ecd45617f837c8110341ec99/mongo-java-driver-2.13.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.12/ed7928072c458d8576c969cc491af707151492fb/jackson-core-asl-1.9.12-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.12/ecfc6f73a841c4c3c653b59651a3f9d5f1286469/jackson-core-asl-1.9.12.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/53746de93a0b30f346c082074a40c01a6cebdfa7/commons-beanutils-1.9.2-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.2/7a87d845ad3a155297e8f67d9008f4c1e5656b71/commons-beanutils-1.9.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/8d30b90ae8bda4fbac8363161c8a9b5a99e23baf/commons-lang3-3.1-sources.jar" />
@@ -749,25 +829,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/big/peka/network/funstream/funstream/api/model/response/User.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageRepository.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/PersistenceEntity.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/Message.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/config/RestDataConfig.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/MessageRepository.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/UserActivityCustom.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/impl/UserActivityRepositoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageEntity.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/Stream.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/User.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java" />
-        <option value="$PROJECT_DIR$/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/config/MongoDbConfig.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/proccessor/RecommendationsProcessor.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/ChannelRepository.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/Channel.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/User.java" />
@@ -775,9 +836,6 @@
         <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/UserActivity.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/UserActivityRepository.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserActivity.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserActivityDocument.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocument.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/proccessor/FunstreamDataProcessor.java" />
@@ -788,18 +846,40 @@
         <option value="$PROJECT_DIR$/src/big/peka/network/proccessor/HibernateDataPreprocessor.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/proccessor/DataPreprocessor.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/preproccessor/DataPreprocessor.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/DataPreprocessor.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/services/RecommendationsProcessor.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/services/StatisticService.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/HibernateDataPreprocessor.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamAxtivityDocument.java" />
-        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamDocumentRepository.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/spring/Application.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/funstream/client/FunstreamsClient.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/String.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/TimingDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatEventListener.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/common/DateRange.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/DataPreprocessor.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/common/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.java" />
         <option value="$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserActivityDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java" />
+        <option value="$PROJECT_DIR$/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/DateRangeDto.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamInfoIntervalDto.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ViewerInfoIntervalDto.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/UserDescriptor.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelEstimateDto.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java" />
+        <option value="$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java" />
       </list>
     </option>
   </component>
@@ -819,7 +899,7 @@
     <option name="width" value="1924" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -842,8 +922,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -881,6 +961,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -976,15 +1104,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="funstream" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="preproccessor" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="intrefaces" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1006,15 +1134,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="funstream" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="preproccessor" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="response" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="funstream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="request" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="funstream" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1041,44 +1233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mongo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peka-network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="peka-network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="network" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1135,6 +1289,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hibernate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hibernate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1200,6 +1392,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peka-network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1211,7 +1425,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/.gradle" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -1535,28 +1749,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1924" height="1056" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22619048" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31385282" sideWeight="0.48294243" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22594595" sideWeight="0.49785408" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31385282" sideWeight="0.47867805" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36796537" sideWeight="0.24946696" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3365801" sideWeight="0.26877683" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37987012" sideWeight="0.75053304" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.49570817" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38961038" sideWeight="0.73122317" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17113733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3495671" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16309012" sideWeight="0.4811644" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38311687" sideWeight="0.8006396" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38311687" sideWeight="0.79744136" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1564,6 +1778,33 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1641791" sideWeight="0.5188356" order="7" side_tool="true" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36796537" sideWeight="0.24946696" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38311687" sideWeight="0.8006396" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22619048" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31385282" sideWeight="0.48294243" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42532468" sideWeight="0.75053304" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1641791" sideWeight="0.5188356" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17274678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3495671" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16309012" sideWeight="0.4811644" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1581,18 +1822,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java</url>
-          <line>142</line>
+          <line>231</line>
           <properties />
           <option name="timeStamp" value="271" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java</url>
-          <line>140</line>
+          <line>229</line>
           <properties />
           <option name="timeStamp" value="272" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="273" />
+      <option name="time" value="282" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1601,367 +1842,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hs_err_pid3600.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid3388.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/CurrentActivitiesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.11.4.RELEASE/1080d362b6e9234ac46f008e38eb119609e34c91/spring-data-commons-1.11.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.9.2.RELEASE/5d612fa830d98752e546727ec241d610d8a0f909/spring-data-mongodb-1.9.2.RELEASE-sources.jar!/org/springframework/data/mongodb/core/mapping/Document.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#1413#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.9.2.RELEASE/5d612fa830d98752e546727ec241d610d8a0f909/spring-data-mongodb-1.9.2.RELEASE-sources.jar!/org/springframework/data/mongodb/config/AbstractMongoConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/33fbaa7276b774ef0925f541640f6ff23fbc62dc/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/NamedEntityGraphs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/ChannelRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/UserActivityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/repositories/interfaces/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserDocumentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/model/MessageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/model/StreamActivityInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/FunstreamsApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/FunstreamsClientContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid3448.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.64">
-          <caret line="252" column="128" selection-start-line="252" selection-start-column="128" selection-end-line="252" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserActivityDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/model/UserActivityInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/api/model/response/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/api/model/response/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-          <folding>
-            <element signature="e#1693#1694#0" expanded="false" />
-            <element signature="e#1724#1725#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/HibernateDataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/intrefaces/FunstreamsDataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/DataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#286#287#0" expanded="false" />
-            <element signature="e#315#316#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#475#476#0" expanded="false" />
-            <element signature="e#529#530#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/big/peka/network/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="46" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1969,7 +1853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1977,18 +1860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#3157#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/spring/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2004,7 +1875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2012,18 +1882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2031,7 +1889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="130" column="39" selection-start-line="130" selection-start-column="39" selection-end-line="130" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2039,16 +1896,474 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="646" column="16" selection-start-line="646" selection-start-column="16" selection-end-line="646" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#51408#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#44628#44629#0" expanded="false" />
+            <element signature="e#44684#44685#0" expanded="false" />
+            <element signature="e#44888#44889#0" expanded="false" />
+            <element signature="e#44974#44975#0" expanded="false" />
+            <element signature="e#45237#45238#0" expanded="false" />
+            <element signature="e#45323#45324#0" expanded="false" />
+            <element signature="e#45701#45702#0" expanded="false" />
+            <element signature="e#45745#45746#0" expanded="false" />
+            <element signature="e#46882#46883#0" expanded="false" />
+            <element signature="e#46925#46926#0" expanded="false" />
+            <element signature="e#46978#46979#0" expanded="false" />
+            <element signature="e#47060#47061#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#57201#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#6390#6391#0" expanded="false" />
+            <element signature="e#6438#6439#0" expanded="false" />
+            <element signature="e#6844#6845#0" expanded="false" />
+            <element signature="e#6875#6876#0" expanded="false" />
+            <element signature="e#7577#7578#0" expanded="false" />
+            <element signature="e#7625#7626#0" expanded="false" />
+            <element signature="e#8526#8527#0" expanded="false" />
+            <element signature="e#8578#8579#0" expanded="false" />
+            <element signature="e#10720#10721#0" expanded="false" />
+            <element signature="e#10750#10751#0" expanded="false" />
+            <element signature="e#28620#28621#0" expanded="false" />
+            <element signature="e#28671#28672#0" expanded="false" />
+            <element signature="e#29442#29443#0" expanded="false" />
+            <element signature="e#29506#29507#0" expanded="false" />
+            <element signature="e#30042#30043#0" expanded="false" />
+            <element signature="e#30120#30121#0" expanded="false" />
+            <element signature="e#31971#31972#0" expanded="false" />
+            <element signature="e#32021#32022#0" expanded="false" />
+            <element signature="e#32819#32820#0" expanded="false" />
+            <element signature="e#32872#32873#0" expanded="false" />
+            <element signature="e#33584#33585#0" expanded="false" />
+            <element signature="e#33655#33656#0" expanded="false" />
+            <element signature="e#34244#34245#0" expanded="false" />
+            <element signature="e#34289#34290#0" expanded="false" />
+            <element signature="e#34885#34886#0" expanded="false" />
+            <element signature="e#34934#34935#0" expanded="false" />
+            <element signature="e#35418#35419#0" expanded="false" />
+            <element signature="e#35465#35466#0" expanded="false" />
+            <element signature="e#36078#36079#0" expanded="false" />
+            <element signature="e#36131#36132#0" expanded="false" />
+            <element signature="e#36717#36718#0" expanded="false" />
+            <element signature="e#36764#36765#0" expanded="false" />
+            <element signature="e#37365#37366#0" expanded="false" />
+            <element signature="e#37418#37419#0" expanded="false" />
+            <element signature="e#37718#37719#0" expanded="false" />
+            <element signature="e#37754#37755#0" expanded="false" />
+            <element signature="e#38710#38711#0" expanded="false" />
+            <element signature="e#38770#38771#0" expanded="false" />
+            <element signature="e#39232#39233#0" expanded="false" />
+            <element signature="e#39292#39293#0" expanded="false" />
+            <element signature="e#39988#39989#0" expanded="false" />
+            <element signature="e#40069#40070#0" expanded="false" />
+            <element signature="e#57143#57144#0" expanded="false" />
+            <element signature="e#57197#57198#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/data/api/model/response/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/HibernateDataPreprocessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.1/8d30b90ae8bda4fbac8363161c8a9b5a99e23baf/commons-lang3-3.1-sources.jar!/org/apache/commons/lang3/time/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="552" column="27" selection-start-line="552" selection-start-column="27" selection-end-line="552" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="306" column="12" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4333996">
+          <caret line="99" column="15" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/util/GregorianCalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="328" column="3" selection-start-line="328" selection-start-column="3" selection-end-line="328" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/funstream/client/ChatEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/DataPreprocessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.5.RELEASE/8bcd5b15133bb5423cdc9f33da7e4ac585fd783a/spring-context-4.2.5.RELEASE-sources.jar!/org/springframework/scheduling/annotation/Scheduled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/common/DateRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/StreamActivityDocumentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/MessageDocumentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/MessageDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamActivityDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/StreamDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/DocumentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/model/UserActivityDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/spring/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="84" selection-start-line="22" selection-start-column="84" selection-end-line="22" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/common/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/preproccessor/impl/MongoDataPreprocessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4348624">
-          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/mongo/repositories/interfaces/UserActivityDocumentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/data/hibernate/model/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamInfoIntervalDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ViewerInfoIntervalDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/UserDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="e#135#136#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/run.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/StreamStatisticDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/CurrentActivitiesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/dto/ChannelEstimateDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
+          <folding>
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/main/big/peka/network/funstream/client/ChatEventListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/lang/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#3692#0" expanded="false" />
+            <element signature="e#3045#3046#0" expanded="false" />
+            <element signature="e#3084#3085#0" expanded="false" />
+            <element signature="e#3507#3508#0" expanded="false" />
+            <element signature="e#3547#3548#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/services/statistic/StatisticService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="293" column="40" selection-start-line="293" selection-start-column="40" selection-end-line="293" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#18239#18240#0" expanded="true" />
+            <element signature="e#18286#18287#0" expanded="true" />
+            <element signature="e#18360#18361#0" expanded="true" />
+            <element signature="e#18424#18425#0" expanded="true" />
+            <element signature="e#19572#19573#0" expanded="true" />
+            <element signature="e#19625#19626#0" expanded="true" />
+            <element signature="e#19840#19841#0" expanded="true" />
+            <element signature="e#19878#19879#0" expanded="true" />
+            <element signature="e#19932#19933#0" expanded="true" />
+            <element signature="e#19978#19979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/banner.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/big/peka/network/web/controllers/RecommendationsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31716418">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#3547#3548#0" expanded="true" />
+            <element signature="e#3610#3611#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,35 +1,32 @@
 package big.peka.network.web.controllers.dto;
 
-import big.peka.network.data.hibernate.model.User;
-import big.peka.network.services.statistic.StatisticService.ChannelEntry;
 import com.google.common.collect.Lists;
 
 import java.util.List;
-import java.util.Set;
 
 public class StreamStatisticDto {
 
-    Set<ChannelEntry<Long>> streamsWithSameViewers;
-    List<User> viewers = Lists.newArrayList();
+    List<ChannelEstimateDto> anotherStreamsViewersCounts = Lists.newArrayList();
+    List<UserDescriptor> viewers = Lists.newArrayList();
 
-    public StreamStatisticDto(Set<ChannelEntry<Long>> streamsWithSameViewers, List<User> viewers) {
-        this.streamsWithSameViewers = streamsWithSameViewers;
+    public StreamStatisticDto(List<ChannelEstimateDto> anotherStreamsViewersCounts, List<UserDescriptor> viewers) {
+        this.anotherStreamsViewersCounts = anotherStreamsViewersCounts;
         this.viewers = viewers;
     }
 
-    public Set<ChannelEntry<Long>> getStreamsWithSameViewers() {
-        return streamsWithSameViewers;
+    public List<ChannelEstimateDto> getAnotherStreamsViewersCounts() {
+        return anotherStreamsViewersCounts;
     }
 
-    public void setStreamsWithSameViewers(Set<ChannelEntry<Long>> streamsWithSameViewers) {
-        this.streamsWithSameViewers = streamsWithSameViewers;
+    public void setAnotherStreamsViewersCounts(List<ChannelEstimateDto> anotherStreamsViewersCounts) {
+        this.anotherStreamsViewersCounts = anotherStreamsViewersCounts;
     }
 
-    public List<User> getViewers() {
+    public List<UserDescriptor> getViewers() {
         return viewers;
     }
 
-    public void setViewers(List<User> viewers) {
+    public void setViewers(List<UserDescriptor> viewers) {
         this.viewers = viewers;
     }
 

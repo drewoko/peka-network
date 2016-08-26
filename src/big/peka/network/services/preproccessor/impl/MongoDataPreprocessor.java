@@ -1,6 +1,8 @@
 package big.peka.network.services.preproccessor.impl;
 
+import big.peka.network.common.DateUtils;
 import big.peka.network.data.mongo.model.*;
+import big.peka.network.data.mongo.model.StreamDocument;
 import big.peka.network.data.mongo.repositories.interfaces.MessageDocumentRepository;
 import big.peka.network.data.mongo.repositories.interfaces.StreamActivityDocumentRepository;
 import big.peka.network.data.mongo.repositories.interfaces.UserActivityDocumentRepository;
@@ -9,9 +11,14 @@ import big.peka.network.funstream.data.model.StreamActivityInfo;
 import big.peka.network.funstream.data.model.UserActivityInfo;
 import big.peka.network.services.preproccessor.intrefaces.FunstreamsDataPreprocessor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
+
+import static big.peka.network.common.DateUtils.getDateBeforeDuration;
 
 @Service
 public class MongoDataPreprocessor implements FunstreamsDataPreprocessor {
@@ -23,13 +30,24 @@ public class MongoDataPreprocessor implements FunstreamsDataPreprocessor {
     @Autowired
     StreamActivityDocumentRepository streamActivityDocumentRepository;
 
+    @Scheduled(fixedRate = 60000L)
+    public void deleteOldDocuments(){
+
+        Date currentDate = GregorianCalendar.getInstance().getTime();
+        Date dateBeforeLastDay = getDateBeforeDuration(currentDate, DateUtils.MILLIS_PER_HOUR);
+
+        messageDocumentRepository.deleteByTimeBefore(dateBeforeLastDay);
+        streamActivityDocumentRepository.deleteByActivityTimeBefore(dateBeforeLastDay);
+        userActivityDocumentRepository.deleteByTimeBefore(dateBeforeLastDay);
+    }
+
+
     @Override
     public void safeData(List<UserActivityInfo> userActivityInfos, List<MessageInfo> messageInfos, List<StreamActivityInfo> streamActivityInfos) {
 
         userActivityInfos.forEach( info -> {
                     UserActivityDocument activityDocument = new UserActivityDocument();
                     info.getStreams().forEach( stream -> {
-
 
                                 UserDocument ownerDocument = new UserDocument();
                                 ownerDocument.setName(stream.getOwner().getName());
@@ -39,6 +57,7 @@ public class MongoDataPreprocessor implements FunstreamsDataPreprocessor {
                                 streamDocument.setSlug(stream.getSlug());
 
                                 UserDocument userDocument = new UserDocument();
+                                userDocument.setName(info.getUser().getName());
 
                                 activityDocument.setStream(streamDocument);
                                 activityDocument.setTime(info.getActivityTime());

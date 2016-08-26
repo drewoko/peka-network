@@ -1,11 +1,17 @@
 package big.peka.network.services.statistic;
 
+import big.peka.network.common.DateRange;
+import big.peka.network.common.DateUtils;
 import big.peka.network.data.hibernate.model.Channel;
 import big.peka.network.data.hibernate.model.User;
 import big.peka.network.data.hibernate.model.UserActivity;
 import big.peka.network.data.hibernate.repositories.interfaces.ChannelRepository;
 import big.peka.network.data.hibernate.repositories.interfaces.UserRepository;
-import big.peka.network.web.controllers.dto.StreamStatisticDto;
+import big.peka.network.data.mongo.model.MessageDocument;
+import big.peka.network.data.mongo.model.UserActivityDocument;
+import big.peka.network.data.mongo.repositories.interfaces.MessageDocumentRepository;
+import big.peka.network.data.mongo.repositories.interfaces.UserActivityDocumentRepository;
+import big.peka.network.web.controllers.dto.*;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.assertj.core.util.Sets;
@@ -17,6 +23,10 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import static big.peka.network.common.DateUtils.getDataRangeByPeriod;
+import static big.peka.network.common.DateUtils.getDateAfterDuration;
+import static big.peka.network.common.DateUtils.getDifference;
+
 @Service
 public class StatisticService {
 
@@ -24,6 +34,10 @@ public class StatisticService {
     UserRepository userRepository;
     @Autowired
     ChannelRepository channelRepository;
+    @Autowired
+    UserActivityDocumentRepository userActivityDocumentRepository;
+    @Autowired
+    MessageDocumentRepository messageDocumentRepository;
 
     private static final int BEST_ACTIVITIES_COUNT = 10;
     private static final int TOP_STREAMS_COUNT = 15;
@@ -32,17 +46,106 @@ public class StatisticService {
     private static final int MIN_FAVOURITE_STREAM_TIME = 3600000;
     private static final int MIN_FAVOURITE_STREAM_ACTIVITY_TIME = 1800000;
 
-    public StreamStatisticDto getCommonStatistic(){
+    public List<StreamInfoIntervalDto> getStreamsViewersActivitiesByDefaultPeriod(String name){
+        return getStreamsViewersActivitiesPerPeriod(name, DateUtils.MILLIS_PER_MINUTE * 5);
+    }
+
+    public List<StreamInfoIntervalDto> getStreamsViewersActivitiesPerPeriod(String name, long period){
+
+        List<UserActivityDocument> viewersActivities = userActivityDocumentRepository.findByStream_Slug(name);
+        List<MessageDocument> messages = messageDocumentRepository.findByStream_Slug(name);
+
+        List<StreamInfoIntervalDto> ranges = Lists.newArrayList();
+        Map<DateRange, StreamInfoIntervalDto> previousDateRanges = Maps.newHashMap();
+        Map<DateRange, Set<String>> viewersOnRange = Maps.newHashMap();
+
+        viewersActivities.forEach( activityDocument -> {
+
+            Date activityDate = activityDocument.getTime();
+            DateRange range = getDataRangeByPeriod(period, activityDate);
+            StreamInfoIntervalDto streamInfoIntervalDto = previousDateRanges.get(range);
+            if (streamInfoIntervalDto == null){
+                streamInfoIntervalDto = new StreamInfoIntervalDto();
+                streamInfoIntervalDto.setStartDate(range.getStartDate());
+                streamInfoIntervalDto.setEndDate(range.getEndDate());
+                streamInfoIntervalDto.setStreamSlug(name);
+            }
+            Set<String> users = viewersOnRange.get(range);
+            if (users == null){
+                users = Sets.newHashSet();
+            }
+            if (!users.contains(activityDocument.getUser().getName())){
+                streamInfoIntervalDto.incrementUsersCount();
+                users.add(activityDocument.getUser().getName());
+            }
+            viewersOnRange.put(range, users);
+            previousDateRanges.put(range, streamInfoIntervalDto);
+        });
+
+        messages.forEach( messageDocument -> {
+
+            Date activityDate = messageDocument.getTime();
+            DateRange range = getDataRangeByPeriod(DateUtils.MILLIS_PER_MINUTE * 5, activityDate);
+            StreamInfoIntervalDto streamInfoIntervalDto = previousDateRanges.get(range);
+            if (streamInfoIntervalDto == null){
+                streamInfoIntervalDto = new StreamInfoIntervalDto();
+                streamInfoIntervalDto.setStartDate(range.getStartDate());
+                streamInfoIntervalDto.setEndDate(range.getEndDate());
+            }
+            streamInfoIntervalDto.incrementMessageCount();
+            previousDateRanges.put(range, streamInfoIntervalDto);
+        });
+
+        ranges.addAll(previousDateRanges.values());
+
+        return ranges;
+    }
+
+    public List<ViewerInfoIntervalDto> getLastDayUsersStatistic(String name){
+
+        List<UserActivityDocument> userActivityDocuments = userActivityDocumentRepository.findByUser_Name(name);
+
+        userActivityDocuments = userActivityDocuments
+                .stream()
+                .sorted((a1, a2) -> {
+                    int result = a1.getTime().compareTo(a2.getTime());
+                    return result == 0 ? a1.toString().compareTo(a2.toString()) : result;
+                })
+                .collect(Collectors.toList());
+
+        List<ViewerInfoIntervalDto> ranges = Lists.newArrayList();
+        Map<String, ViewerInfoIntervalDto> previousDateRanges = Maps.newHashMap();
+
+        userActivityDocuments.forEach( activityDocument -> {
+
+            Date activityDate = activityDocument.getTime();
+            String activityStream = activityDocument.getStream().getSlug();
+            ViewerInfoIntervalDto previousRange = previousDateRanges.get(activityStream);
+
+            if (previousRange != null){
+                if (getDifference(activityDate, previousRange.getEndDate()) <= DateUtils.MILLIS_PER_MINUTE){
+                    previousRange = new ViewerInfoIntervalDto(previousRange.getStartDate(), getDateAfterDuration(activityDate, 20000), activityStream, name);
+                }
+                else {
+                    ranges.add(previousRange);
+                    previousRange = new ViewerInfoIntervalDto(activityDate, getDateAfterDuration(activityDate, 20000), activityStream, name);
+                }
+            } else{
+                previousRange = new ViewerInfoIntervalDto(activityDate, getDateAfterDuration(activityDate, 20000), activityStream, name);
+            }
+            previousDateRanges.put(activityStream, previousRange);
+        });
+
+        ranges.addAll(previousDateRanges.values());
+
+        return ranges;
+    }
+
+    public Set<ChannelEntry<Long>> getMostPopularStreams(){
 
         Set<User> users = userRepository.findAll();
 
-        TreeSet<ChannelEntry<Long>> sortedStreamsByCount =
-                new TreeSet<>((Comparator<ChannelEntry<Long>>)
-                        (e1, e2) ->
-                                !e1.getEstimate().equals(e2.getEstimate())
-                                        ? e1.getEstimate().compareTo(e2.getEstimate())
-                                        : e1.toString().compareTo(e2.toString())
-                );
+        TreeSet<ChannelEntry<Long>> sortedStreamsByCount = new TreeSet<>();
         Map<Channel, Long> channelsCount = Maps.newHashMap();
 
         for (User user : users){
@@ -59,33 +162,26 @@ public class StatisticService {
 
         channelsCount.forEach(
                 (channel, count) -> {
-                    if (sortedStreamsByCount.size() < TOP_STREAMS_COUNT){
+                    if (sortedStreamsByCount.size() < TOP_STREAMS_COUNT) {
                         sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
-                    }
-                    else {
-                        if (count > sortedStreamsByCount.first().getEstimate()){
+                    } else {
+                        if (count > sortedStreamsByCount.first().getEstimate()) {
                             sortedStreamsByCount.remove(sortedStreamsByCount.first());
                             sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
                         }
                     }
-        });
+                });
 
-        return new StreamStatisticDto(sortedStreamsByCount, null);
+        return sortedStreamsByCount;
 
     }
 
-    public StreamStatisticDto getStreamStatistic(String streamName){
+    public StreamStatistic getStreamStatistic(String streamName){
 
         Channel stream = channelRepository.findBySlug(streamName);
         Set<User> users = userRepository.findAll();
 
-        TreeSet<ChannelEntry<Long>> sortedStreamsByCount =
-                new TreeSet<>((Comparator<ChannelEntry<Long>>)
-                        (e1, e2) ->
-                                !e1.getEstimate().equals(e2.getEstimate())
-                                        ? e1.getEstimate().compareTo(e2.getEstimate())
-                                        : e1.toString().compareTo(e2.toString())
-                );
+        TreeSet<ChannelEntry<Long>> sortedStreamsByCount = new TreeSet<>();
 
         Map<Channel, Long> channelsCount = Maps.newHashMap();
         List<User> viewers = Lists.newArrayList();
@@ -110,11 +206,10 @@ public class StatisticService {
 
         channelsCount.forEach(
                 (channel, count) -> {
-                    if (sortedStreamsByCount.size() < TOP_VIEWERS_ANOTHER_STREAMS){
+                    if (sortedStreamsByCount.size() < TOP_VIEWERS_ANOTHER_STREAMS) {
                         sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
-                    }
-                    else {
-                        if (count > sortedStreamsByCount.first().getEstimate()){
+                    } else {
+                        if (count > sortedStreamsByCount.first().getEstimate()) {
                             sortedStreamsByCount.remove(sortedStreamsByCount.first());
                             sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
                         }
@@ -122,18 +217,12 @@ public class StatisticService {
                 }
         );
 
-        return new StreamStatisticDto(sortedStreamsByCount, viewers);
+        return new StreamStatistic(sortedStreamsByCount, viewers);
     }
 
-    public Set<Channel> getRecommendStreams(String userName, int streamsCount){
+    public Set<Channel> getRecommendStreams(java.lang.String userName, int streamsCount){
 
-        TreeSet<AggregatedChannelEntries<Double>> sortedChannelEstimates =
-                new TreeSet<>((Comparator<AggregatedChannelEntries<Double>>)
-                        (e1, e2) ->
-                            !e1.getAggregatedValue().equals(e2.getAggregatedValue())
-                                    ? e1.getAggregatedValue().compareTo(e2.getAggregatedValue())
-                                    : e1.toString().compareTo(e2.toString())
-                );
+        TreeSet<AggregatedChannelEntries<Double>> sortedChannelEstimates = new TreeSet<>();
 
         User processingUser = userRepository.findByName(userName);
         Map<Channel, Double> topUsersStreams = getBestStreams(processingUser, Sets.newHashSet());
@@ -157,13 +246,7 @@ public class StatisticService {
                 }
         );
 
-        TreeSet<ChannelEntry<Long>> sortedStreamsByCount =
-                new TreeSet<>((Comparator<ChannelEntry<Long>>)
-                        (e1, e2) ->
-                                !e1.getEstimate().equals(e2.getEstimate())
-                                        ? e1.getEstimate().compareTo(e2.getEstimate())
-                                        : e1.toString().compareTo(e2.toString())
-                );
+        TreeSet<ChannelEntry<Long>> sortedStreamsByCount = new TreeSet<>();
 
         Map<Channel, Long> streamToRecommendationCounts =
                 sortedChannelEstimates.stream()
@@ -180,12 +263,11 @@ public class StatisticService {
                     UserActivity userActivity = usersChannels.get(channel);
                     if (!topUsersStreams.containsKey(channel)
                             && !channel.getOwner().equals(processingUser)
-                            && (userActivity == null || userActivity.getTime() < MAX_NOT_FAMILIAR_STREAM_TIME)){
-                        if (sortedStreamsByCount.size() < streamsCount){
+                            && (userActivity == null || userActivity.getTime() < MAX_NOT_FAMILIAR_STREAM_TIME)) {
+                        if (sortedStreamsByCount.size() < streamsCount) {
                             sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
-                        }
-                        else {
-                            if (count > sortedStreamsByCount.last().getEstimate()){
+                        } else {
+                            if (count > sortedStreamsByCount.last().getEstimate()) {
                                 sortedStreamsByCount.remove(sortedStreamsByCount.last());
                                 sortedStreamsByCount.add(new ChannelEntry<>(channel, count));
                             }
@@ -196,6 +278,17 @@ public class StatisticService {
 
         return sortedStreamsByCount.stream().map(ChannelEntry::getStream).collect(Collectors.toSet());
 
+    }
+
+    public Set<ChannelEntry> getBestStreamsSorted(String userName){
+
+        TreeSet<ChannelEntry> sortedEntries = new TreeSet<>();
+        getBestStreams(userName).forEach(((channel, estimate) -> {
+                    sortedEntries.add(new ChannelEntry<>(channel, estimate));
+                })
+        );
+
+        return sortedEntries;
     }
 
     public Map<Channel, Double> getBestStreams(String userName){
@@ -233,13 +326,7 @@ public class StatisticService {
             return Maps.newHashMap();
         }
 
-        TreeSet<ChannelEntry<Double>> sortedStreams =
-                new TreeSet<>((Comparator<ChannelEntry<Double>>)
-                        (e1, e2) ->
-                                !e1.getEstimate().equals(e2.getEstimate())
-                                        ? e1.getEstimate().compareTo(e2.getEstimate())
-                                        : e1.toString().compareTo(e2.toString())
-                );
+        TreeSet<ChannelEntry<Double>> sortedStreams = new TreeSet<>();
 
         for (UserActivity activity : activities){
 
@@ -295,7 +382,7 @@ public class StatisticService {
         return score;
     }
 
-    public class ChannelEntry<T> {
+    public class ChannelEntry<T> implements Comparable<ChannelEntry<T>> {
 
         private Channel stream;
         private T value;
@@ -320,9 +407,22 @@ public class StatisticService {
         public void setEstimate(T estimate) {
             this.value = estimate;
         }
+
+        @Override
+        public int compareTo(ChannelEntry<T> entry) {
+            if (value instanceof Comparable){
+                Comparable val = (Comparable) value;
+                return !val.equals(entry.value)
+                        ? val.compareTo(entry.value)
+                        : this.toString().compareTo(entry.toString());
+            }
+            else {
+                return this.toString().compareTo(entry.toString());
+            }
+        }
     }
 
-    private class AggregatedChannelEntries<T> {
+    private class AggregatedChannelEntries<T> implements Comparable<AggregatedChannelEntries<T>> {
 
         private Set<Channel> channelEstimates = Sets.newHashSet();
         private T aggregatedValue;
@@ -347,5 +447,48 @@ public class StatisticService {
         public void setAggregatedValue(T aggregatedValue) {
             this.aggregatedValue = aggregatedValue;
         }
+
+        @Override
+        public int compareTo(AggregatedChannelEntries entries) {
+
+            if (aggregatedValue instanceof Comparable){
+
+                Comparable value = (Comparable)aggregatedValue;
+
+                return !value.equals(entries.aggregatedValue)
+                        ? value.compareTo(entries.aggregatedValue)
+                        : this.toString().compareTo(entries.toString());
+            }
+            else return this.toString().compareTo(entries.toString());
+        }
     }
+
+    public class StreamStatistic {
+
+        Set<ChannelEntry<Long>> streamsWithSameViewers;
+        List<User> viewers = Lists.newArrayList();
+
+        public StreamStatistic(Set<ChannelEntry<Long>> streamsWithSameViewers, List<User> viewers) {
+            this.streamsWithSameViewers = streamsWithSameViewers;
+            this.viewers = viewers;
+        }
+
+        public Set<ChannelEntry<Long>> getStreamsWithSameViewers() {
+            return streamsWithSameViewers;
+        }
+
+        public void setStreamsWithSameViewers(Set<ChannelEntry<Long>> streamsWithSameViewers) {
+            this.streamsWithSameViewers = streamsWithSameViewers;
+        }
+
+        public List<User> getViewers() {
+            return viewers;
+        }
+
+        public void setViewers(List<User> viewers) {
+            this.viewers = viewers;
+        }
+
+    }
+
 }

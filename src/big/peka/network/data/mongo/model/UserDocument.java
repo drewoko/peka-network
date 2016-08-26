@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Set;
 
 @Document
-public class UserDocument {
+public class UserDocument extends DocumentEntity {
 
     private Set userActivities = Sets.newHashSet();
 
