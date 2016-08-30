@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-image: url(http://s5.hostingkartinok.com/uploads/images/2014/01/c1846d2d52079f605a2cf57cafd1687c.png);
+      background-repeat: no-repeat;
+	  background-position: top center;
+	  }
+h1 {
+     font-size: 70px;
+	 margin-top: 170px;
+}
+div    {color: blue;
+        font-size: 30px;
+		}
+td {
+  padding: 10px;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1 align="center">Stream rating</h1>
+<div align="center", id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:9000/getStreamRating";
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myFunction(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table>";
+
+    for(i = arr.length-1; i >= 0; i--) {
+        out += "<tr><td>" +
+        arr[i].channelDescriptor.channelSlug +
+        "</td><td>" +
+        arr[i].estimate +
+        "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+</body>
+</html>

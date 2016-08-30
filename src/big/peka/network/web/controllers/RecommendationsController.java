@@ -1,12 +1,12 @@
 package big.peka.network.web.controllers;
 
 import big.peka.network.data.hibernate.model.Channel;
+import big.peka.network.services.statistic.CurrentActivitiesService;
 import big.peka.network.services.statistic.StatisticService;
 import big.peka.network.services.statistic.StatisticService.StreamStatistic;
 import big.peka.network.services.statistic.StatisticService.ChannelEntry;
 import big.peka.network.web.controllers.dto.*;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class RecommendationsController {
@@ -24,15 +23,37 @@ public class RecommendationsController {
     @Autowired
     StatisticService statisticService;
 
-    @RequestMapping("/getRecommendations/{name}")
+    @Autowired
+    CurrentActivitiesService currentActivitiesService;
+
+    @RequestMapping("/getUserStatistic/{name}")
     @ResponseBody
-    Set<Channel> getRecommendations(@PathVariable String name){
-        return statisticService.getRecommendStreams(name, 5);
+    UserStatisticDto getUserStatistic(@PathVariable String name)
+    {
+        List<ChannelDescriptor> recommendations = getRecommendations(name);
+        List<ChannelDescriptor> favouriteStreams = getUsersFavouriteStreams(name);
+        List<ViewerInfoIntervalDto> infoIntervalDtos = getLastDayUserStatistic(name);
+        List<String> currentBrowsableStreams = currentActivitiesService.findUser(name);
+
+        return new UserStatisticDto(infoIntervalDtos, favouriteStreams, recommendations, currentBrowsableStreams);
     }
 
-    @RequestMapping("/getUsersStreamTop/{name}")
+    @RequestMapping("/getRecommendations/{name}")
     @ResponseBody
-    List<ChannelDescriptor> getUsersStreamTop(@PathVariable String name){
+    List<ChannelDescriptor> getRecommendations(@PathVariable String name){
+
+        List<ChannelDescriptor> result = Lists.newArrayList();
+        statisticService.getRecommendStreams(name, 5).forEach(channel -> {
+                    result.add(convertToDto(channel));
+                }
+        );
+
+        return result;
+    }
+
+    @RequestMapping("/getUsersFavouriteStreams/{name}")
+    @ResponseBody
+    List<ChannelDescriptor> getUsersFavouriteStreams(@PathVariable String name){
 
         List<ChannelDescriptor> result = Lists.newArrayList();
         statisticService.getBestStreamsSorted(name).forEach( channelEntry -> {
@@ -47,12 +68,15 @@ public class RecommendationsController {
     @ResponseBody
     StreamStatisticDto getStreamStatistic(@PathVariable String name){
 
-        return convertToDto(statisticService.getStreamStatistic(name));
+        StreamStatisticDto streamStatisticDto = convertToDto(statisticService.getStreamStatistic(name));
+        streamStatisticDto.setInfoIntervals(getStreamsViewersActivities(name));
+        streamStatisticDto.setOnline(currentActivitiesService.isStreamOnline(name));
+        return streamStatisticDto;
     }
 
-    @RequestMapping(value = "/getCommonStatistic")
+    @RequestMapping(value = "/getStreamRating")
     @ResponseBody
-    List<ChannelEstimateDto> getCommonStatistic(){
+    List<ChannelEstimateDto> getStreamRating(){
 
         List<ChannelEstimateDto> streamsWithCount = Lists.newArrayList();
         statisticService.getMostPopularStreams().forEach( entry -> {
@@ -65,9 +89,9 @@ public class RecommendationsController {
 
     @RequestMapping("/lastDayUserStatistic/{name}")
     @ResponseBody
-    ResponseEntity<List<ViewerInfoIntervalDto>> getLastDayUserStatistic(@PathVariable String name)
+    List<ViewerInfoIntervalDto> getLastDayUserStatistic(@PathVariable String name)
     {
-        return new ResponseEntity<>(statisticService.getLastDayUsersStatistic(name), HttpStatus.OK);
+        return statisticService.getLastDayUsersStatistic(name);
     }
 
     @RequestMapping("/lastDayStreamActivities/{name}")

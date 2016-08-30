@@ -30,11 +30,11 @@ public class MongoDataPreprocessor implements FunstreamsDataPreprocessor {
     @Autowired
     StreamActivityDocumentRepository streamActivityDocumentRepository;
 
-    @Scheduled(fixedRate = 60000L)
+    @Scheduled(fixedRate = DateUtils.MILLIS_PER_HOUR)
     public void deleteOldDocuments(){
 
         Date currentDate = GregorianCalendar.getInstance().getTime();
-        Date dateBeforeLastDay = getDateBeforeDuration(currentDate, DateUtils.MILLIS_PER_HOUR);
+        Date dateBeforeLastDay = getDateBeforeDuration(currentDate, DateUtils.MILLIS_PER_DAY);
 
         messageDocumentRepository.deleteByTimeBefore(dateBeforeLastDay);
         streamActivityDocumentRepository.deleteByActivityTimeBefore(dateBeforeLastDay);

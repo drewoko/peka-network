@@ -6,20 +6,23 @@ import java.util.List;
 
 public class StreamStatisticDto {
 
-    List<ChannelEstimateDto> anotherStreamsViewersCounts = Lists.newArrayList();
-    List<UserDescriptor> viewers = Lists.newArrayList();
+    boolean online;
 
-    public StreamStatisticDto(List<ChannelEstimateDto> anotherStreamsViewersCounts, List<UserDescriptor> viewers) {
-        this.anotherStreamsViewersCounts = anotherStreamsViewersCounts;
+    List<ChannelEstimateDto> viewersFavouriteStreams = Lists.newArrayList();
+    List<UserDescriptor> viewers = Lists.newArrayList();
+    List<StreamInfoIntervalDto> infoIntervals = Lists.newArrayList();
+
+    public StreamStatisticDto(List<ChannelEstimateDto> viewersFavouriteStreams, List<UserDescriptor> viewers) {
+        this.viewersFavouriteStreams = viewersFavouriteStreams;
         this.viewers = viewers;
     }
 
-    public List<ChannelEstimateDto> getAnotherStreamsViewersCounts() {
-        return anotherStreamsViewersCounts;
+    public List<ChannelEstimateDto> getViewersFavouriteStreams() {
+        return viewersFavouriteStreams;
     }
 
-    public void setAnotherStreamsViewersCounts(List<ChannelEstimateDto> anotherStreamsViewersCounts) {
-        this.anotherStreamsViewersCounts = anotherStreamsViewersCounts;
+    public void setViewersFavouriteStreams(List<ChannelEstimateDto> viewersFavouriteStreams) {
+        this.viewersFavouriteStreams = viewersFavouriteStreams;
     }
 
     public List<UserDescriptor> getViewers() {
@@ -30,4 +33,19 @@ public class StreamStatisticDto {
         this.viewers = viewers;
     }
 
+    public List<StreamInfoIntervalDto> getInfoIntervals() {
+        return infoIntervals;
+    }
+
+    public void setInfoIntervals(List<StreamInfoIntervalDto> infoIntervals) {
+        this.infoIntervals = infoIntervals;
+    }
+
+    public boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(boolean online) {
+        this.online = online;
+    }
 }

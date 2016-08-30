@@ -41,13 +41,14 @@ public class StatisticService {
 
     private static final int BEST_ACTIVITIES_COUNT = 10;
     private static final int TOP_STREAMS_COUNT = 15;
-    private static final int TOP_VIEWERS_ANOTHER_STREAMS = 10;
-    private static final int MAX_NOT_FAMILIAR_STREAM_TIME = 60000;
-    private static final int MIN_FAVOURITE_STREAM_TIME = 3600000;
-    private static final int MIN_FAVOURITE_STREAM_ACTIVITY_TIME = 1800000;
+    private static final int TOP_VIEWERS_ANOTHER_STREAMS = 15;
+    private static final long MAX_NOT_FAMILIAR_STREAM_TIME = DateUtils.MILLIS_PER_MINUTE;
+    private static final long MIN_FAVOURITE_STREAM_TIME = DateUtils.MILLIS_PER_HOUR;
+    private static final long MIN_FAVOURITE_STREAM_ACTIVITY_TIME = DateUtils.MILLIS_PER_HOUR / 2;
+    private static final long TIME_PER_PERIOD_FOR_STREAM_ACTIVITIES = DateUtils.MILLIS_PER_MINUTE * 15;
 
     public List<StreamInfoIntervalDto> getStreamsViewersActivitiesByDefaultPeriod(String name){
-        return getStreamsViewersActivitiesPerPeriod(name, DateUtils.MILLIS_PER_MINUTE * 5);
+        return getStreamsViewersActivitiesPerPeriod(name, TIME_PER_PERIOD_FOR_STREAM_ACTIVITIES);
     }
 
     public List<StreamInfoIntervalDto> getStreamsViewersActivitiesPerPeriod(String name, long period){
@@ -68,7 +69,6 @@ public class StatisticService {
                 streamInfoIntervalDto = new StreamInfoIntervalDto();
                 streamInfoIntervalDto.setStartDate(range.getStartDate());
                 streamInfoIntervalDto.setEndDate(range.getEndDate());
-                streamInfoIntervalDto.setStreamSlug(name);
             }
             Set<String> users = viewersOnRange.get(range);
             if (users == null){
@@ -82,12 +82,12 @@ public class StatisticService {
             previousDateRanges.put(range, streamInfoIntervalDto);
         });
 
-        messages.forEach( messageDocument -> {
+        messages.forEach(messageDocument -> {
 
             Date activityDate = messageDocument.getTime();
-            DateRange range = getDataRangeByPeriod(DateUtils.MILLIS_PER_MINUTE * 5, activityDate);
+            DateRange range = getDataRangeByPeriod(TIME_PER_PERIOD_FOR_STREAM_ACTIVITIES, activityDate);
             StreamInfoIntervalDto streamInfoIntervalDto = previousDateRanges.get(range);
-            if (streamInfoIntervalDto == null){
+            if (streamInfoIntervalDto == null) {
                 streamInfoIntervalDto = new StreamInfoIntervalDto();
                 streamInfoIntervalDto.setStartDate(range.getStartDate());
                 streamInfoIntervalDto.setEndDate(range.getEndDate());
@@ -97,6 +97,7 @@ public class StatisticService {
         });
 
         ranges.addAll(previousDateRanges.values());
+        Collections.sort(ranges);
 
         return ranges;
     }
@@ -116,27 +117,27 @@ public class StatisticService {
         List<ViewerInfoIntervalDto> ranges = Lists.newArrayList();
         Map<String, ViewerInfoIntervalDto> previousDateRanges = Maps.newHashMap();
 
-        userActivityDocuments.forEach( activityDocument -> {
+        userActivityDocuments.forEach(activityDocument -> {
 
             Date activityDate = activityDocument.getTime();
             String activityStream = activityDocument.getStream().getSlug();
             ViewerInfoIntervalDto previousRange = previousDateRanges.get(activityStream);
 
-            if (previousRange != null){
-                if (getDifference(activityDate, previousRange.getEndDate()) <= DateUtils.MILLIS_PER_MINUTE){
+            if (previousRange != null) {
+                if (getDifference(activityDate, previousRange.getEndDate()) <= DateUtils.MILLIS_PER_MINUTE) {
                     previousRange = new ViewerInfoIntervalDto(previousRange.getStartDate(), getDateAfterDuration(activityDate, 20000), activityStream, name);
-                }
-                else {
+                } else {
                     ranges.add(previousRange);
                     previousRange = new ViewerInfoIntervalDto(activityDate, getDateAfterDuration(activityDate, 20000), activityStream, name);
                 }
-            } else{
+            } else {
                 previousRange = new ViewerInfoIntervalDto(activityDate, getDateAfterDuration(activityDate, 20000), activityStream, name);
             }
             previousDateRanges.put(activityStream, previousRange);
         });
 
         ranges.addAll(previousDateRanges.values());
+        Collections.sort(ranges);
 
         return ranges;
     }
@@ -220,7 +221,7 @@ public class StatisticService {
         return new StreamStatistic(sortedStreamsByCount, viewers);
     }
 
-    public Set<Channel> getRecommendStreams(java.lang.String userName, int streamsCount){
+    public Set<Channel> getRecommendStreams(String userName, int streamsCount){
 
         TreeSet<AggregatedChannelEntries<Double>> sortedChannelEstimates = new TreeSet<>();
 
@@ -306,6 +307,7 @@ public class StatisticService {
 
         Set<UserActivity> activities = user.getActivities();
         double maxChatActivity = Double.MAX_VALUE;
+        double maxMessageCount = 0;
         long totalTime = 0;
         boolean containsRequiredStreams = requiredStreams.size() == 0;
         int foundedRequiredStreams = 0;
@@ -314,6 +316,7 @@ public class StatisticService {
             if (activity.getMessageCount() != 0){
                 double chatActivity = channel.getTime() / activity.getMessageCount() / activity.getMessageCount();
                 maxChatActivity = Math.min(maxChatActivity, chatActivity);
+                maxMessageCount = Math.max(maxMessageCount, activity.getMessageCount());
                 totalTime += activity.getTime();
             }
             if (requiredStreams.contains(channel)){
@@ -330,7 +333,7 @@ public class StatisticService {
 
         for (UserActivity activity : activities){
 
-            Double estimate = calculateEstimate(activity, maxChatActivity, totalTime);
+            Double estimate = calculateEstimate(activity, maxChatActivity, totalTime, maxMessageCount);
             if (sortedStreams.size() < BEST_ACTIVITIES_COUNT){
                 if (estimate > 0){
                     sortedStreams.add(new ChannelEntry<>(activity.getChannel(), estimate));
@@ -352,7 +355,7 @@ public class StatisticService {
         return result;
     }
 
-    private Double calculateEstimate(UserActivity activity, double maxChatActivity, long totalTime){
+    private Double calculateEstimate(UserActivity activity, double maxChatActivity, long totalTime, double maxMessageCount){
 
         long activityTime = activity.getTime();
         long totalStreamTime = activity.getChannel().getTime();
@@ -360,8 +363,9 @@ public class StatisticService {
         double estimate = 0;
         if (totalStreamTime > MIN_FAVOURITE_STREAM_TIME && activityTime > MIN_FAVOURITE_STREAM_ACTIVITY_TIME){
             estimate = 1 -
-                    Math.exp(-6 * activityTime * (2d / totalStreamTime + 6d / activityTime / totalTime));
-            double chatEstimate = activity.getMessageCount() * activity.getMessageCount() / (activity.getChannel().getTime() / maxChatActivity);
+                    Math.exp(-6 * activityTime * (4d / (3d * totalStreamTime) + 6d / activityTime / totalTime));
+            double chatEstimate = 0.5 * (activity.getMessageCount() * activity.getMessageCount() / (activity.getChannel().getTime() / maxChatActivity)
+                    + activity.getMessageCount() / maxMessageCount);
             estimate += chatEstimate;
         }
 

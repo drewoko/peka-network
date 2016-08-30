@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-image: url(http://s5.hostingkartinok.com/uploads/images/2014/01/c1846d2d52079f605a2cf57cafd1687c.png);
+      background-repeat: no-repeat;
+	  background-position: top center;
+	  }
+h1 {
+     font-size: 40px;
+	 color: black;
+	 margin-left: 30px;
+}
+div {
+     color: black;
+     font-size: 30px;
+	}
+td {
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid black;
+}
+th{
+   border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<p style="margin-top: 200px; margin-left: 40px; font-size: 25px; font-weight: bold">Input channel name</p>
+<input type="text" id="userName" size="30" style="margin-left: 40px;" />
+<input type="button" value="Search" onclick="goToStreamStatistic()"/>
+ 
+ <div id = "head"></div>
+ <div id = "onlineStatus" style = "margin-left: 36px; font-size: 30px; font-weight: bold"></div>
+ <table style = "margin-left: 10px;">
+<tr>
+ <td valign="top", style ="border: 1px solid white;">
+ <div   id="favourites"></div>
+ </td>
+ <td valign="top", style ="border: 1px solid white;">
+ <div   id="infoIntervals"></div>
+ </td>
+</tr>
+</table>
+<div  id="viewers" style = "margin-left: 40px;"></div>
+ 
+
+<script type="text/javascript">
+
+function goToStreamStatistic()
+{
+    var name = document.getElementById('userName').value;
+	var url = "http://localhost:9000/getStreamStatistic/" + name;
+	getStreamStatistic(url, name);
+}
+
+function getStreamStatistic(url, name){
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myFunction(xmlhttp.responseText, name);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+}
+
+function myFunction(response, name) {
+    
+	var head = "<h1>Statistic for " + name + "</h1>";
+	document.getElementById("head").innerHTML = head;
+
+    var responseDtos = JSON.parse(response);
+	
+	var status;
+	if(responseDtos.online){
+	   status = "online"
+	}
+	else{
+	   status = "offline"
+	}
+	
+	var onlineStatus = "<p>Currently " + status + "</p>"
+	document.getElementById("onlineStatus").innerHTML = onlineStatus;
+	
+    var i;
+	var favouriteStreamsOut = "<div>Favourite users streams:</div><table>";
+	var favouriteStreamsArr = responseDtos.viewersFavouriteStreams;
+
+    for(i = favouriteStreamsArr.length-1; i >= 0; i--) {
+        favouriteStreamsOut += "<tr><td>" +
+		(favouriteStreamsArr.length - i) +
+		"</td><td>" +
+		favouriteStreamsArr[i].channelDescriptor.channelSlug +
+		"</td><td>" +
+		favouriteStreamsArr[i].estimate
+		"</td></tr>";
+    }
+    favouriteStreamsOut += "</table>";
+	document.getElementById("favourites").innerHTML = favouriteStreamsOut;
+	
+	var viewers = responseDtos.viewers;
+	var viewersOut = "<div>Viewers:</div><table>"
+	var rowEntriesCount = 5;
+	
+	for(i = viewers.length-1; i >= 0; i--) {
+        viewersOut += "<tr>" 
+		count = 0;
+		while(count < rowEntriesCount && i >=0){
+		    viewersOut += "<td>" + viewers[i].name + "</td>";
+			i--;
+			count++;
+		}
+		"</tr>";
+    }
+	viewersOut += "</table>";
+	document.getElementById("viewers").innerHTML = viewersOut;
+	
+	var infoIntervals = responseDtos.infoIntervals;
+	var infoIntervalsOut = "<div>Last day activities:</div><table><th>From</th><th>To</th><th>Viewers count</th><th>Messages count</th>"
+	
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	
+	for(i = infoIntervals.length-1; i >= 0; i--) {
+	
+	    var startDate = new Date(infoIntervals[i].startDate);
+		var endDate = new Date(infoIntervals[i].endDate);
+		
+        infoIntervalsOut += "<tr><td>" +
+		days[startDate.getDay()] + " " + startDate.getHours() + ":" + startDate.getMinutes() + ":" + startDate.getSeconds() +
+		"</td><td>" +
+		days[endDate.getDay()] + " " + endDate.getHours() + ":" + endDate.getMinutes() + ":" + endDate.getSeconds() +
+		"</td><td>" +
+		infoIntervals[i].usersCount +
+		"</td><td>" +
+		infoIntervals[i].messageCount +
+		"</td></tr>";
+    }
+	infoIntervalsOut += "</table>";
+	document.getElementById("infoIntervals").innerHTML = infoIntervalsOut;
+    
+}
+
+
+</script>
+
+</body>
+</html>
