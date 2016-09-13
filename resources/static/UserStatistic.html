@@ -1,51 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {background-image: url(http://s5.hostingkartinok.com/uploads/images/2014/01/c1846d2d52079f605a2cf57cafd1687c.png);
-      background-repeat: no-repeat;
-	  background-position: top center;
-	  }
-h1 {
-     font-size: 40px;
-	 color: black;
-	 margin-left: 30px;
-}
-div {
-     color: black;
-     font-size: 30px;
-	}
-td {
-  padding: 10px;
-  padding-left: 20px;
-  border: 1px solid black;
-}
-</style>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
-<p style="margin-top: 200px; margin-left: 40px; font-size: 25px; font-weight: bold">Input username</p>
-<input type="text" id="userName" size="30" style="margin-left: 40px;" />
-<input type="button" value="Search" onclick="goToUserStatistic()"/>
+	<p>Input username</p>
+
+	<input type="text" id="userName" size="30" style="margin-left: 40px;" />
+	<input type="button" value="Search" onclick="goToUserStatistic()"/>
  
- <div id = "head"></div>
- <table style = "margin-left: 10px;">
-<tr>
- <td valign="top", style ="border: 1px solid white;">
- <div id="infoIntervals"></div>
- </td>
- <td valign="top", style ="border: 1px solid white;">
- <div   id="favourites"></div>
- </td>
- <td valign="top", style ="border: 1px solid white;">
- <div  id="recommendations"></div>
- </td>
-</tr>
-<tr>
-<td valign="top", style ="border: 1px solid white;">
-<div id="currentBrowsableStreams"></div>
-</td>
-</table>
+ 	<div id = "statisticHead"></div>
+
+	<table style = "margin-left: 10px;">
+		<tr>
+			<td valign="top", style ="border: 1px solid white;">
+				<div id="infoIntervals"></div>
+			</td>
+			<td valign="top", style ="border: 1px solid white;">
+				<div   id="favourites"></div>
+			</td>
+			<td valign="top", style ="border: 1px solid white;">
+				<div  id="recommendations"></div>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top", style ="border: 1px solid white;">
+				<div id="currentBrowsableStreams"></div>
+			</td>
+	</table>
  
 
 <script type="text/javascript">
@@ -63,7 +46,7 @@ var xmlhttp = new XMLHttpRequest();
 
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myFunction(xmlhttp.responseText, name);
+        onResponse(xmlhttp.responseText, name);
     }
 }
 xmlhttp.open("GET", url, true);
@@ -71,13 +54,13 @@ xmlhttp.send();
 
 }
 
-function myFunction(response, name) {
-    
+function onResponse(response, name) {
+
 	var head = "<h1>Statistic for " + name + "</h1>";
-	document.getElementById("head").innerHTML = head;
+	document.getElementById("statisticHead").innerHTML = head;
 
     var responseDtos = JSON.parse(response);
-	
+
     var i;
 	var favouriteStreamsOut = "<div>Favourite users streams:</div><table>";
 	var favouriteStreamsArr = responseDtos.usersFavouriteStreams;
@@ -91,10 +74,10 @@ function myFunction(response, name) {
     }
     favouriteStreamsOut += "</table>";
 	document.getElementById("favourites").innerHTML = favouriteStreamsOut;
-	
+
 	var recommendations = responseDtos.streamsToRecomendate;
 	var recommendationsOut = "<div>Recommendations:</div><table>"
-	
+
 	for(i = recommendations.length-1; i >= 0; i--) {
         recommendationsOut += "<tr><td>" +
 		(recommendations.length - i) +
@@ -104,17 +87,17 @@ function myFunction(response, name) {
     }
 	recommendationsOut += "</table>";
 	document.getElementById("recommendations").innerHTML = recommendationsOut;
-	
+
 	var infoIntervals = responseDtos.viewerInfoIntervalDtos;
 	var infoIntervalsOut = "<div>Last day activities:</div><table>"
-	
+
 	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-	
+
 	for(i = infoIntervals.length-1; i >= 0; i--) {
-	
+
 	    var startDate = new Date(infoIntervals[i].startDate);
 		var endDate = new Date(infoIntervals[i].endDate);
-		
+
         infoIntervalsOut += "<tr><td>" +
 		days[startDate.getDay()] + " " + startDate.getHours() + ":" + startDate.getMinutes() + ":" + startDate.getSeconds() +
 		"</td><td>" +
@@ -125,11 +108,11 @@ function myFunction(response, name) {
     }
 	infoIntervalsOut += "</table>";
 	document.getElementById("infoIntervals").innerHTML = infoIntervalsOut;
-	
+
 	var currentBrowsableStreams = responseDtos.currentBrowsableStreams;
 	if(currentBrowsableStreams.length > 0){
 	    var currentBrowsableStreamsOut = "<div>Current Browsable Streams:</div><table>"
-	
+
 	    for(i = currentBrowsableStreams.length-1; i >= 0; i--) {
            currentBrowsableStreamsOut += "<tr><td>" +
 	       currentBrowsableStreams[i] +
@@ -138,11 +121,7 @@ function myFunction(response, name) {
 	    currentBrowsableStreamsOut += "</table>";
 	    document.getElementById("currentBrowsableStreams").innerHTML = currentBrowsableStreamsOut;
 	}
-	
-
-    
 }
-
 
 </script>
 
