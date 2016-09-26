@@ -387,7 +387,7 @@ public class StatisticService {
         return score;
     }
 
-    public class ChannelEntry<T> implements Comparable<ChannelEntry<T>> {
+    public static class ChannelEntry<T> implements Comparable<ChannelEntry<T>> {
 
         private Channel stream;
         private T value;
